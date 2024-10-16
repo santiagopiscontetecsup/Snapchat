@@ -64,6 +64,16 @@
                                     <action selector="iniciarSesionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZA8-jN-5YD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjJ-wT-Uhu">
+                                <rect key="frame" x="74" y="541" width="242" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Iniciar Sesion anonimamente"/>
+                                <connections>
+                                    <action selector="iniciarSesionAnonimaTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ub3-PH-Nxs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -80,6 +90,8 @@
                             <constraint firstItem="5eL-iK-qfM" firstAttribute="top" secondItem="LCX-Sv-oQi" secondAttribute="bottom" constant="25" id="X8Q-2L-o4I"/>
                             <constraint firstItem="mz6-74-dLL" firstAttribute="centerX" secondItem="5eL-iK-qfM" secondAttribute="centerX" id="fLp-64-2is"/>
                             <constraint firstItem="awU-9I-ltc" firstAttribute="top" secondItem="8mL-Xy-iSm" secondAttribute="bottom" constant="25" id="hHq-di-pTI"/>
+                            <constraint firstItem="SjJ-wT-Uhu" firstAttribute="centerX" secondItem="mz6-74-dLL" secondAttribute="centerX" id="n3O-4C-lqc"/>
+                            <constraint firstItem="SjJ-wT-Uhu" firstAttribute="top" secondItem="mz6-74-dLL" secondAttribute="bottom" constant="38" id="nPs-gB-vzX"/>
                             <constraint firstItem="8mL-Xy-iSm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="z8L-DH-Twe"/>
                         </constraints>
                     </view>
