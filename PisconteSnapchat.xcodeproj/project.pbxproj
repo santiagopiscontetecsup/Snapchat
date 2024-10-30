@@ -28,6 +28,10 @@
 		8750CFE12CC063E600F21C65 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8750CFE02CC063E600F21C65 /* FirebaseAuth */; };
 		8750CFE32CC0641B00F21C65 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8750CFE22CC0641B00F21C65 /* FirebaseDatabase */; };
 		8750CFE52CC0642200F21C65 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8750CFE42CC0642200F21C65 /* FirebaseStorage */; };
+		878A01542CD2D91D00701CBF /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878A01532CD2D91D00701CBF /* Snap.swift */; };
+		878A01562CD2DE2900701CBF /* VerSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878A01552CD2DE2900701CBF /* VerSnapViewController.swift */; };
+		878A01592CD2E2C900701CBF /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 878A01582CD2E2C900701CBF /* SDWebImage */; };
+		878A015B2CD2E2C900701CBF /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 878A015A2CD2E2C900701CBF /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,8 @@
 		8750CFC82CC05C4A00F21C65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8750CFCA2CC05C4A00F21C65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8750CFD02CC05F1F00F21C65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		878A01532CD2D91D00701CBF /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
+		878A01552CD2DE2900701CBF /* VerSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerSnapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +62,10 @@
 				8750CFD42CC0623800F21C65 /* FirebaseAnalytics in Frameworks */,
 				8750CFE52CC0642200F21C65 /* FirebaseStorage in Frameworks */,
 				8750CFD62CC0623800F21C65 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				878A01592CD2E2C900701CBF /* SDWebImage in Frameworks */,
 				8750CFDC2CC0623800F21C65 /* FirebaseAppCheck in Frameworks */,
 				8750CFDA2CC0623800F21C65 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				878A015B2CD2E2C900701CBF /* SDWebImageMapKit in Frameworks */,
 				8750CFE12CC063E600F21C65 /* FirebaseAuth in Frameworks */,
 				8750CFE32CC0641B00F21C65 /* FirebaseDatabase in Frameworks */,
 				8750CFDE2CC0623800F21C65 /* FirebaseAppDistribution-Beta in Frameworks */,
@@ -75,6 +83,7 @@
 				8750CFC02CC05C4800F21C65 /* iniciarSesionViewController.swift */,
 				872C927E2CC9A39900EAD1C1 /* ImagenViewController.swift */,
 				870738D12CCAB0ED004908DB /* RegisterViewController.swift */,
+				878A01552CD2DE2900701CBF /* VerSnapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -83,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				870738CF2CCAAA2F004908DB /* Usuario.swift */,
+				878A01532CD2D91D00701CBF /* Snap.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -153,6 +163,8 @@
 				8750CFE02CC063E600F21C65 /* FirebaseAuth */,
 				8750CFE22CC0641B00F21C65 /* FirebaseDatabase */,
 				8750CFE42CC0642200F21C65 /* FirebaseStorage */,
+				878A01582CD2E2C900701CBF /* SDWebImage */,
+				878A015A2CD2E2C900701CBF /* SDWebImageMapKit */,
 			);
 			productName = PisconteSnapchat;
 			productReference = 8750CFB92CC05C4800F21C65 /* PisconteSnapchat.app */;
@@ -184,6 +196,7 @@
 			mainGroup = 8750CFB02CC05C4800F21C65;
 			packageReferences = (
 				8750CFD22CC0623800F21C65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				878A01572CD2E2C900701CBF /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 8750CFBA2CC05C4800F21C65 /* Products */;
 			projectDirPath = "";
@@ -215,7 +228,9 @@
 			files = (
 				872C927D2CC99CB400EAD1C1 /* SnapsViewController.swift in Sources */,
 				872C927F2CC9A39900EAD1C1 /* ImagenViewController.swift in Sources */,
+				878A01542CD2D91D00701CBF /* Snap.swift in Sources */,
 				870738D02CCAAA2F004908DB /* Usuario.swift in Sources */,
+				878A01562CD2DE2900701CBF /* VerSnapViewController.swift in Sources */,
 				870738D22CCAB0ED004908DB /* RegisterViewController.swift in Sources */,
 				8750CFC12CC05C4800F21C65 /* iniciarSesionViewController.swift in Sources */,
 				8750CFBD2CC05C4800F21C65 /* AppDelegate.swift in Sources */,
@@ -447,6 +462,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		878A01572CD2E2C900701CBF /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -494,6 +517,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8750CFD22CC0623800F21C65 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		878A01582CD2E2C900701CBF /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 878A01572CD2E2C900701CBF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		878A015A2CD2E2C900701CBF /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 878A01572CD2E2C900701CBF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

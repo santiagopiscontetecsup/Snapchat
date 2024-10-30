@@ -34,7 +34,7 @@ class iniciarSesionViewController: UIViewController {
                 self.present(alerta, animated: true, completion: nil)
             } else {
                 print("Inicio de Sesion Exitoso")
-                self.performSegue(withIdentifier: " ", sender: nil)
+                self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
             }
         }
     }

@@ -210,12 +210,24 @@
         <!--Snaps View Controller-->
         <scene sceneID="G5A-y4-Vfr">
             <objects>
-                <viewController id="tJF-Mq-Pjz" customClass="SnapsViewController" customModule="PisconteSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tJF-Mq-Pjz" customClass="SnapsViewController" customModule="PisconteSnapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PHO-CS-oud">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GKQ-SU-ZcW">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JXs-yK-OOc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GKQ-SU-ZcW" firstAttribute="top" secondItem="JXs-yK-OOc" secondAttribute="top" id="1vn-tU-EzD"/>
+                            <constraint firstItem="GKQ-SU-ZcW" firstAttribute="leading" secondItem="JXs-yK-OOc" secondAttribute="leading" id="HGL-va-Bwc"/>
+                            <constraint firstItem="JXs-yK-OOc" firstAttribute="trailing" secondItem="GKQ-SU-ZcW" secondAttribute="trailing" id="Igg-3g-HRN"/>
+                            <constraint firstItem="JXs-yK-OOc" firstAttribute="bottom" secondItem="GKQ-SU-ZcW" secondAttribute="bottom" id="tva-Ns-WAy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gVc-BJ-3Wd">
                         <barButtonItem key="leftBarButtonItem" title="Cerrar Sesión" id="Yj2-eT-Ad9">
@@ -229,6 +241,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tablaSnaps" destination="GKQ-SU-ZcW" id="Jni-iP-Wnt"/>
+                        <segue destination="Eqv-Wo-52t" kind="show" identifier="versnapsegue" id="bsr-19-FFZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03b-83-4IA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -334,6 +350,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2h-GO-uWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3000" y="4"/>
+        </scene>
+        <!--Ver Snap View Controller-->
+        <scene sceneID="ki0-gj-7PV">
+            <objects>
+                <viewController id="Eqv-Wo-52t" customClass="VerSnapViewController" customModule="PisconteSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DQx-Zl-KGQ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Th1-Bq-hjW">
+                                <rect key="frame" x="10" y="179" width="370" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="XkA-X0-qED"/>
+                                    <constraint firstAttribute="height" constant="190" id="fkU-Sd-iKC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mensaje:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRC-wL-qhB">
+                                <rect key="frame" x="10" y="106" width="68.333333333333329" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagen Enviada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSy-I2-YAg">
+                                <rect key="frame" x="10.000000000000007" y="144" width="124.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ypi-vI-wNn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hSy-I2-YAg" firstAttribute="top" secondItem="nRC-wL-qhB" secondAttribute="bottom" constant="17" id="7Nr-56-ZJr"/>
+                            <constraint firstItem="Th1-Bq-hjW" firstAttribute="centerX" secondItem="Ypi-vI-wNn" secondAttribute="centerX" id="EDq-A3-SGb"/>
+                            <constraint firstItem="nRC-wL-qhB" firstAttribute="top" secondItem="Ypi-vI-wNn" secondAttribute="top" constant="15" id="Lcw-fq-W3X"/>
+                            <constraint firstItem="hSy-I2-YAg" firstAttribute="leading" secondItem="Ypi-vI-wNn" secondAttribute="leading" constant="10" id="MT1-Cq-9Oj"/>
+                            <constraint firstItem="nRC-wL-qhB" firstAttribute="leading" secondItem="Ypi-vI-wNn" secondAttribute="leading" constant="10" id="pA3-du-UrY"/>
+                            <constraint firstItem="Th1-Bq-hjW" firstAttribute="top" secondItem="hSy-I2-YAg" secondAttribute="bottom" constant="14" id="pZd-Fk-mXi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iDK-t0-Dh0"/>
+                    <connections>
+                        <outlet property="imageView" destination="Th1-Bq-hjW" id="13a-cP-DNr"/>
+                        <outlet property="lblMensaje" destination="nRC-wL-qhB" id="AZr-4S-y8I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvl-mx-LNw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1496.9230769230769" y="679.62085308056874"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rsf-q1-vFD">
