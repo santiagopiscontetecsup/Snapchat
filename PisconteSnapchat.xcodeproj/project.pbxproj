@@ -12,6 +12,8 @@
 		870738D22CCAB0ED004908DB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870738D12CCAB0ED004908DB /* RegisterViewController.swift */; };
 		872C927D2CC99CB400EAD1C1 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872C927C2CC99CB400EAD1C1 /* SnapsViewController.swift */; };
 		872C927F2CC9A39900EAD1C1 /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872C927E2CC9A39900EAD1C1 /* ImagenViewController.swift */; };
+		873A77842CD3DAB9002346C8 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A77832CD3DAB9002346C8 /* SoundViewController.swift */; };
+		873A77882CD3E9E8002346C8 /* Grabacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A77872CD3E9E8002346C8 /* Grabacion.swift */; };
 		8750CFBD2CC05C4800F21C65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8750CFBC2CC05C4800F21C65 /* AppDelegate.swift */; };
 		8750CFBF2CC05C4800F21C65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8750CFBE2CC05C4800F21C65 /* SceneDelegate.swift */; };
 		8750CFC12CC05C4800F21C65 /* iniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8750CFC02CC05C4800F21C65 /* iniciarSesionViewController.swift */; };
@@ -40,6 +42,8 @@
 		870738D12CCAB0ED004908DB /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		872C927C2CC99CB400EAD1C1 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		872C927E2CC9A39900EAD1C1 /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
+		873A77832CD3DAB9002346C8 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		873A77872CD3E9E8002346C8 /* Grabacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grabacion.swift; sourceTree = "<group>"; };
 		8750CFB92CC05C4800F21C65 /* PisconteSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PisconteSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8750CFBC2CC05C4800F21C65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8750CFBE2CC05C4800F21C65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 				872C927E2CC9A39900EAD1C1 /* ImagenViewController.swift */,
 				870738D12CCAB0ED004908DB /* RegisterViewController.swift */,
 				878A01552CD2DE2900701CBF /* VerSnapViewController.swift */,
+				873A77832CD3DAB9002346C8 /* SoundViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 			children = (
 				870738CF2CCAAA2F004908DB /* Usuario.swift */,
 				878A01532CD2D91D00701CBF /* Snap.swift */,
+				873A77872CD3E9E8002346C8 /* Grabacion.swift */,
 			);
 			path = Modelos;
 			sourceTree = "<group>";
@@ -226,9 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873A77882CD3E9E8002346C8 /* Grabacion.swift in Sources */,
 				872C927D2CC99CB400EAD1C1 /* SnapsViewController.swift in Sources */,
 				872C927F2CC9A39900EAD1C1 /* ImagenViewController.swift in Sources */,
 				878A01542CD2D91D00701CBF /* Snap.swift in Sources */,
+				873A77842CD3DAB9002346C8 /* SoundViewController.swift in Sources */,
 				870738D02CCAAA2F004908DB /* Usuario.swift in Sources */,
 				878A01562CD2DE2900701CBF /* VerSnapViewController.swift in Sources */,
 				870738D22CCAB0ED004908DB /* RegisterViewController.swift in Sources */,

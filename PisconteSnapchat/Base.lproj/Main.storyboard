@@ -115,7 +115,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingrese su usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivo-iy-YIc">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="santiago1@empresa.com" borderStyle="roundedRect" placeholder="Ingrese su usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ivo-iy-YIc">
                                 <rect key="frame" x="95" y="298" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="spt-xd-tPp"/>
@@ -250,6 +250,79 @@
             </objects>
             <point key="canvasLocation" x="1498" y="4"/>
         </scene>
+        <!--Grabar Audio-->
+        <scene sceneID="QPv-Gs-Gbb">
+            <objects>
+                <viewController id="MQs-vd-rFA" customClass="SoundViewController" customModule="PisconteSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vKw-aT-hYg">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoI-Da-6RP">
+                                <rect key="frame" x="75" y="231" width="240" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvf-zc-qCz">
+                                <rect key="frame" x="75" y="276" width="240" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuY-M5-7qt">
+                                <rect key="frame" x="75" y="340" width="240" height="35.666666666666686"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Elegir Contacto">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="elegirContactoTapped:" destination="MQs-vd-rFA" eventType="touchUpInside" id="PfK-RZ-QbN"/>
+                                    <action selector="elegirContactoTapped:" destination="af0-nO-qfr" eventType="touchUpInside" id="hTo-mF-mR8"/>
+                                    <segue destination="TgG-Q2-dUn" kind="show" identifier="elegirContactoGrabacionSegue" id="w8j-jY-N4T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uT4-6f-DT6">
+                                <rect key="frame" x="75" y="121" width="240" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fQD-fE-J1z"/>
+                                    <constraint firstAttribute="width" constant="240" id="ucl-cl-cIL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Grabar"/>
+                                <connections>
+                                    <action selector="grabarTapped:" destination="MQs-vd-rFA" eventType="touchUpInside" id="Z8E-DZ-nVH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vnR-G6-C7M"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uT4-6f-DT6" firstAttribute="centerX" secondItem="DoI-Da-6RP" secondAttribute="centerX" id="BMY-WA-lhr"/>
+                            <constraint firstItem="fuY-M5-7qt" firstAttribute="top" secondItem="nvf-zc-qCz" secondAttribute="bottom" constant="30" id="HnG-vE-TEu"/>
+                            <constraint firstItem="uT4-6f-DT6" firstAttribute="top" secondItem="vnR-G6-C7M" secondAttribute="top" constant="30" id="Kov-Jn-Z4o"/>
+                            <constraint firstItem="uT4-6f-DT6" firstAttribute="centerX" secondItem="vKw-aT-hYg" secondAttribute="centerX" id="MOM-FQ-rH4"/>
+                            <constraint firstItem="nvf-zc-qCz" firstAttribute="top" secondItem="DoI-Da-6RP" secondAttribute="bottom" constant="24" id="OhS-MW-uH1"/>
+                            <constraint firstItem="DoI-Da-6RP" firstAttribute="top" secondItem="uT4-6f-DT6" secondAttribute="bottom" constant="30" id="bas-iy-6oa"/>
+                            <constraint firstItem="nvf-zc-qCz" firstAttribute="centerX" secondItem="fuY-M5-7qt" secondAttribute="centerX" id="hJI-lX-Uky"/>
+                            <constraint firstItem="DoI-Da-6RP" firstAttribute="centerX" secondItem="nvf-zc-qCz" secondAttribute="centerX" id="hqq-5y-wLB"/>
+                            <constraint firstItem="uT4-6f-DT6" firstAttribute="width" secondItem="DoI-Da-6RP" secondAttribute="width" id="lEf-dx-eL4"/>
+                            <constraint firstItem="DoI-Da-6RP" firstAttribute="width" secondItem="nvf-zc-qCz" secondAttribute="width" id="qst-Wu-r7q"/>
+                            <constraint firstItem="nvf-zc-qCz" firstAttribute="width" secondItem="fuY-M5-7qt" secondAttribute="width" id="rP0-Lr-dMI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grabar Audio" id="4j4-MY-Hgr"/>
+                    <connections>
+                        <outlet property="elegirContactoButton" destination="fuY-M5-7qt" id="ntH-fF-EhP"/>
+                        <outlet property="grabarButton" destination="uT4-6f-DT6" id="hZN-tz-GXm"/>
+                        <outlet property="titleTextField" destination="nvf-zc-qCz" id="mfj-yU-5PJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5o-s8-EDu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2270.7692307692305" y="-659.00473933649289"/>
+        </scene>
         <!--Enviar Mensaje-->
         <scene sceneID="jIz-Z8-3z5">
             <objects>
@@ -303,15 +376,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Enviar Mensaje" id="rIo-aH-mEf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="cpe-1h-P2x">
-                            <connections>
-                                <action selector="camaraTapped:" destination="af0-nO-qfr" id="7gp-KI-Vfx"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="cpe-1h-P2x">
+                                <connections>
+                                    <action selector="camaraTapped:" destination="af0-nO-qfr" id="7gp-KI-Vfx"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="play" id="VJk-oT-goO">
+                                <connections>
+                                    <action selector="grabarAudioTapped:" destination="af0-nO-qfr" id="Su4-hz-2ur"/>
+                                    <segue destination="MQs-vd-rFA" kind="show" identifier="grabarAudioSegue" id="WSM-V7-RpI"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="descripcionTextField" destination="wgC-VW-g9T" id="3wW-fn-TKH"/>
                         <outlet property="elegirContactoBoton" destination="PKY-q8-ewP" id="Pvj-lX-doY"/>
+                        <outlet property="grabarAudioButton" destination="VJk-oT-goO" id="Mt5-tU-Tmh"/>
                         <outlet property="imageView" destination="hUs-2p-QYy" id="06j-J5-FRi"/>
                         <segue destination="TgG-Q2-dUn" kind="show" identifier="seleccionarContactoSegue" id="iAi-Y0-gtD"/>
                     </connections>
@@ -419,6 +501,9 @@
             <point key="canvasLocation" x="750.76923076923072" y="3.5545023696682461"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="w8j-jY-N4T"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="200x70" width="200" height="70"/>
         <systemColor name="systemBackgroundColor">

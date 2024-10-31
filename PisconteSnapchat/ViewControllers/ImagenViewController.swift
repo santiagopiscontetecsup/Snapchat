@@ -17,6 +17,12 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var descripcionTextField: UITextField!
     @IBOutlet weak var elegirContactoBoton: UIButton!
     
+    @IBOutlet weak var grabarAudioButton: UIBarButtonItem!
+    
+    @IBAction func grabarAudioTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "grabarAudioSegue", sender: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -24,10 +30,16 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let siguienteVC = segue.destination as! ElegirUsuarioViewController
-        siguienteVC.imagenURL = sender as! String
-        siguienteVC.descrip = descripcionTextField.text!
-        siguienteVC.imagenID = imagenID
+        if segue.identifier == "seleccionarContactoSegue" {
+                // Caso para el segue hacia ElegirUsuarioViewController
+                let siguienteVC = segue.destination as! ElegirUsuarioViewController
+                siguienteVC.imagenURL = sender as! String
+                siguienteVC.descrip = descripcionTextField.text!
+                siguienteVC.imagenID = imagenID
+                
+            } else if segue.identifier == "grabarAudioSegue" {
+                let otroVC = segue.destination as! SoundViewController
+            }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -75,22 +87,6 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.performSegue(withIdentifier: "seleccionarContactoSegue", sender: url?.absoluteString)
                 })
             }
-            //        let alertaCarga = UIAlertController(title: "Cargando imagen ...", message: "0%", preferredStyle: .alert)
-            //        let progresoCargsa : UIProgressView = UIProgressView(progressViewStyle: .default)
-            //        cargarImagen.observe(.progress) { (snapshot) in
-            //            let porcentaje = Double(snapshot.progress!.completedUnitCount) / Double(snapshot.progress!.totalUnitCount)
-            //            print(porcentaje)
-            //            progresoCargsa.setProgress(Float(porcentaje), animated: true)
-            //            progresoCargsa.frame = CGRect(x: 10, y: 70, width: 250, height: 0)
-            //            alertaCarga.message = String(round(porcentaje * 100.0)) + " %"
-            //            if porcentaje >= 1.0 {
-            //                alertaCarga.dismiss(animated: true, completion: nil)
-            //            }
-            //        }
-            //        let btnOK = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
-            //        alertaCarga.addAction(btnOK)
-            //        alertaCarga.view.addSubview(progresoCargsa)
-            //        present(alertaCarga, animated: true, completion: nil)
         }
     }
 }
