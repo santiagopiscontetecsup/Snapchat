@@ -235,11 +235,18 @@
                                 <action selector="cerrarSesionTapped:" destination="tJF-Mq-Pjz" id="Lkx-kH-HBr"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0WS-3k-zov">
-                            <connections>
-                                <segue destination="af0-nO-qfr" kind="show" id="bnE-p0-pIO"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="0WS-3k-zov">
+                                <connections>
+                                    <segue destination="af0-nO-qfr" kind="show" id="bnE-p0-pIO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Audios" id="uSK-r8-cTM">
+                                <connections>
+                                    <segue destination="siK-qf-0QU" kind="show" id="Djw-Ts-ZHS"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tablaSnaps" destination="GKQ-SU-ZcW" id="Jni-iP-Wnt"/>
@@ -249,6 +256,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03b-83-4IA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1498" y="4"/>
+        </scene>
+        <!--Audios-->
+        <scene sceneID="hBH-iq-c6m">
+            <objects>
+                <viewController id="siK-qf-0QU" customClass="EscucharAudioViewController" customModule="PisconteSnapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="31c-nh-XXH">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="n3V-li-rcY">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AudioCell" rowHeight="81" id="YvH-tF-8ZA" customClass="CustomAudioCellTableViewCell" customModule="PisconteSnapchat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YvH-tF-8ZA" id="R0e-av-1G5">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9j-dR-EHv">
+                                                    <rect key="frame" x="330.66666666666669" y="24" width="43.333333333333314" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="playTapped:" destination="siK-qf-0QU" eventType="touchUpInside" id="KXA-UO-W7l"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSV-pX-GZZ">
+                                                    <rect key="frame" x="36" y="11" width="240" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="240" id="gIV-U9-eYf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVa-rE-MAZ">
+                                                    <rect key="frame" x="36" y="44" width="240" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="240" id="pud-Yn-67O"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dSV-pX-GZZ" firstAttribute="leading" secondItem="R0e-av-1G5" secondAttribute="leadingMargin" constant="16" id="LK8-Ev-Dte"/>
+                                                <constraint firstItem="SVa-rE-MAZ" firstAttribute="top" secondItem="dSV-pX-GZZ" secondAttribute="bottom" constant="12" id="R0P-tJ-LRG"/>
+                                                <constraint firstItem="dSV-pX-GZZ" firstAttribute="top" secondItem="R0e-av-1G5" secondAttribute="topMargin" id="dI4-tW-4AA"/>
+                                                <constraint firstAttribute="trailing" secondItem="i9j-dR-EHv" secondAttribute="trailing" constant="16" id="dpy-Xf-zJ7"/>
+                                                <constraint firstItem="SVa-rE-MAZ" firstAttribute="leading" secondItem="R0e-av-1G5" secondAttribute="leadingMargin" constant="16" id="hr6-SO-a9P"/>
+                                                <constraint firstItem="i9j-dR-EHv" firstAttribute="top" secondItem="R0e-av-1G5" secondAttribute="top" constant="24" id="ka7-dF-BCB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="playButton" destination="i9j-dR-EHv" id="jGy-Mx-AKv"/>
+                                            <outlet property="tableViewFrom" destination="SVa-rE-MAZ" id="NKg-re-7IJ"/>
+                                            <outlet property="tableViewTitulo" destination="dSV-pX-GZZ" id="CAl-Zh-WBR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="quQ-zH-xdP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n3V-li-rcY" firstAttribute="leading" secondItem="quQ-zH-xdP" secondAttribute="leading" id="TwO-54-Oyn"/>
+                            <constraint firstItem="n3V-li-rcY" firstAttribute="top" secondItem="quQ-zH-xdP" secondAttribute="top" id="dmp-cC-Udj"/>
+                            <constraint firstItem="quQ-zH-xdP" firstAttribute="bottom" secondItem="n3V-li-rcY" secondAttribute="bottom" id="uXG-11-ZKI"/>
+                            <constraint firstItem="quQ-zH-xdP" firstAttribute="trailing" secondItem="n3V-li-rcY" secondAttribute="trailing" id="xQS-k0-bsT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Audios" id="Qex-vC-Urs"/>
+                    <connections>
+                        <outlet property="tableView" destination="n3V-li-rcY" id="h98-LT-FmX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ch9-si-Hg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504" y="-653"/>
         </scene>
         <!--Grabar Audio-->
         <scene sceneID="QPv-Gs-Gbb">
@@ -506,6 +595,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="200x70" width="200" height="70"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

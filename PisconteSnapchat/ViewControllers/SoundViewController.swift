@@ -79,9 +79,8 @@ class SoundViewController: UIViewController {
                             print("Ocurrió un error al obtener la información de la grabación \(error?.localizedDescription ?? "desconocido")")
                             return
                         }
-                        print("-------------------------------------------")
-                        print("URL de grabación obtenida: \(enlaceURL.absoluteString)")
-                        print("-------------------------------------------")
+                        
+                        // Aquí se llama al segue pasando la URL
                         self.performSegue(withIdentifier: "elegirContactoGrabacionSegue", sender: enlaceURL.absoluteString)
                     }
                 }

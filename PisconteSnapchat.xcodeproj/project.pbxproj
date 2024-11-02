@@ -14,6 +14,8 @@
 		872C927F2CC9A39900EAD1C1 /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872C927E2CC9A39900EAD1C1 /* ImagenViewController.swift */; };
 		873A77842CD3DAB9002346C8 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A77832CD3DAB9002346C8 /* SoundViewController.swift */; };
 		873A77882CD3E9E8002346C8 /* Grabacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873A77872CD3E9E8002346C8 /* Grabacion.swift */; };
+		874B33382CD685DF0011ADA4 /* EscucharAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874B33372CD685DF0011ADA4 /* EscucharAudioViewController.swift */; };
+		874B333B2CD68D730011ADA4 /* CustomAudioCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874B333A2CD68D730011ADA4 /* CustomAudioCellTableViewCell.swift */; };
 		8750CFBD2CC05C4800F21C65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8750CFBC2CC05C4800F21C65 /* AppDelegate.swift */; };
 		8750CFBF2CC05C4800F21C65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8750CFBE2CC05C4800F21C65 /* SceneDelegate.swift */; };
 		8750CFC12CC05C4800F21C65 /* iniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8750CFC02CC05C4800F21C65 /* iniciarSesionViewController.swift */; };
@@ -44,6 +46,8 @@
 		872C927E2CC9A39900EAD1C1 /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
 		873A77832CD3DAB9002346C8 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 		873A77872CD3E9E8002346C8 /* Grabacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grabacion.swift; sourceTree = "<group>"; };
+		874B33372CD685DF0011ADA4 /* EscucharAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscucharAudioViewController.swift; sourceTree = "<group>"; };
+		874B333A2CD68D730011ADA4 /* CustomAudioCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAudioCellTableViewCell.swift; sourceTree = "<group>"; };
 		8750CFB92CC05C4800F21C65 /* PisconteSnapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PisconteSnapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8750CFBC2CC05C4800F21C65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8750CFBE2CC05C4800F21C65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				870738D12CCAB0ED004908DB /* RegisterViewController.swift */,
 				878A01552CD2DE2900701CBF /* VerSnapViewController.swift */,
 				873A77832CD3DAB9002346C8 /* SoundViewController.swift */,
+				874B33372CD685DF0011ADA4 /* EscucharAudioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -101,6 +106,14 @@
 				873A77872CD3E9E8002346C8 /* Grabacion.swift */,
 			);
 			path = Modelos;
+			sourceTree = "<group>";
+		};
+		874B33392CD68D1E0011ADA4 /* Celdas */ = {
+			isa = PBXGroup;
+			children = (
+				874B333A2CD68D730011ADA4 /* CustomAudioCellTableViewCell.swift */,
+			);
+			path = Celdas;
 			sourceTree = "<group>";
 		};
 		8750CFB02CC05C4800F21C65 = {
@@ -123,6 +136,7 @@
 		8750CFBB2CC05C4800F21C65 /* PisconteSnapchat */ = {
 			isa = PBXGroup;
 			children = (
+				874B33392CD68D1E0011ADA4 /* Celdas */,
 				870738CE2CCAAA0C004908DB /* Modelos */,
 				870738CD2CCAA991004908DB /* ViewControllers */,
 				8750CFBC2CC05C4800F21C65 /* AppDelegate.swift */,
@@ -243,7 +257,9 @@
 				8750CFC12CC05C4800F21C65 /* iniciarSesionViewController.swift in Sources */,
 				8750CFBD2CC05C4800F21C65 /* AppDelegate.swift in Sources */,
 				8750CFBF2CC05C4800F21C65 /* SceneDelegate.swift in Sources */,
+				874B333B2CD68D730011ADA4 /* CustomAudioCellTableViewCell.swift in Sources */,
 				870738CC2CCAA46C004908DB /* ElegirUsuarioViewController.swift in Sources */,
+				874B33382CD685DF0011ADA4 /* EscucharAudioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

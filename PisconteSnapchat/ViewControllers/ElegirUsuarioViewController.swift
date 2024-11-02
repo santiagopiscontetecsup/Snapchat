@@ -24,6 +24,8 @@ class ElegirUsuarioViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidLoad()
         listaUsuarios.delegate = self
         listaUsuarios.dataSource = self
+
+        
         Database.database().reference().child("usuarios").observe(DataEventType.childAdded, with: {(snapshot) in
             print(snapshot)
             
@@ -38,7 +40,9 @@ class ElegirUsuarioViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let usuario = usuarios[indexPath.row]
         let snap = ["from" : Auth.auth().currentUser?.email, "descripcion" : descrip, "imagenURL" : imagenURL, "imagenID" : imagenID]
-        let grabacion = ["from" : Auth.auth().currentUser?.email, "titulo" : titulo, "grabacionURL" : grabacionURL, "grabacionID" : grabacionID]
+        print("Esta es la grabacioURL:  ---------------------- \(grabacionURL)")
+        let grabacion = ["from": Auth.auth().currentUser?.email ?? "", "titulo": titulo, "grabacionURL": grabacionURL, "grabacionID": grabacionID]
+        print(grabacion)
         if imagenURL == "" {
             Database.database().reference().child("usuarios").child(usuario.uid).child("grabaciones").childByAutoId().setValue(grabacion)
             navigationController?.popViewController(animated: true)

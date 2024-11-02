@@ -13,4 +13,13 @@ class Grabacion{
     var from = ""
     var id = ""
     var grabacionID = ""
+    
+    // Inicializador personalizado
+    init(id: String, titulo: String, from: String, url: String) {
+        self.id = id
+        self.titulo = titulo
+        self.from = from
+        self.grabacionURL = url
+        self.grabacionID = ""
+    }
 }
